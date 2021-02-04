@@ -1,0 +1,30 @@
+{
+    "dica1":[
+        "O barco Amarelo está em algum lugar à esquerda do barco do Vendedor.",
+        "O barco do pescador que levou um sanduíche de Salame está ao lado do barco do Veterinário.",
+        "O barco do Policial está em algum lugar entre o do que levou um sanduíche de Frango e o do que é Analista, nessa ordem.",
+        "O barco Verde está ao lado do barco do Policial.",
+        "O barco do Analista está exatamente à direita do barco do Veterinário.",
+        "O barco do Analista está exatamente à direita do barco do Veterinário.",
+        "O pescador que pescou um Traíra está na quinta posição.",
+        "O pescador que pescou um Dourado está em algum lugar à direita do barco Azul.",
+        "O sanduíche de Salame é do pescador que está com o barco na segunda posição.",
+        "O barco do Rodrigo está ao lado do barco do Junior.",
+        "O barco do Rodrigo está na terceira posição.",
+        "O barco Azul está em algum lugar à esquerda do barco do Junior."
+    ],
+
+    "dica2":[
+        "O barco Alvorada está ao lado do barco do Leandro.",
+        "O barco Santa Mônica está exatamente à esquerda do barco do pescador que pescou um Dourado.",
+        "Leandro está em algum lugar à direita do barco de cor Azul.",
+        "O barco Pacífico está exatamente à esquerda do barco do pescador que pescou o peixe Jurupoca.",
+        "Na terceira posição está o pescador que conseguiu um Dourado.",
+        "O barco Thor está na primeira posição.",
+        "O barco Amarelo está exatamente à esquerda do barco do pescador que trouxe um sanduíche de Presunto.",
+        "O barco verde está em algum lugar à esquerda do barco Azul.",
+        "Quem pescou um Jaú está em algum lugar entre o pescador Daniel e quem pescou um Jurupoca, nessa ordem.",
+        "O peixe Dourado foi pescado por alguém que está ao lado do pescador que trouxe o sanduíche de Queijo.",
+        "O barco Vermelho está em algum lugar à esquerda do barco do pescador que trouxe um sanduíche de Presunto."
+    ]
+}

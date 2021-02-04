@@ -1,0 +1,10 @@
+.section{
+    border-bottom: solid;
+    border-color: #017b6e;
+    margin: 2px;
+    line-height: 20px;
+}
+
+.section p{
+    margin: 0px;
+}

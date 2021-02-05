@@ -1,16 +1,24 @@
-import React from 'react'
+import {React, useState} from 'react'
 import '../../../styles/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css'
 import './Formulario.css'
 import Logo from '../../../img/logo-flexge-white.png'
+import $ from 'jquery'
 
 function handleSubmit(event){
     event.preventDefault()
 }
 
+
 function Formulario (props) {
+    
+    const [data1, setData1] = useState('')
+    
+    $('#form-submit').on('click', function(){
+        setData1(new Date())
+        console.log(data1)
+    })
 
     return(
-        
         <div className="cadastro">
             
             <form className="form-cadastro">
@@ -27,7 +35,7 @@ function Formulario (props) {
                     <label>Telefone</label>
                     <input className="form-control" type="tel"></input>
                 </div>
-                <button onClick={handleSubmit, props.fct}>Iniciar teste</button>
+                <button id="form-submit" onClick={handleSubmit, props.fct}>Iniciar teste</button>
             </form>
         </div>
         

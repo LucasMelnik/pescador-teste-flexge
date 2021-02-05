@@ -30,14 +30,11 @@
     border-color: rgb(3, 30, 60);
 }
 
-.cadastro .form-cadastro .form-submit{
-    width: 90%;
-}
 
 .cadastro .form-cadastro button{
     color: white;
     font-size: 22px;
-    width: 79%;
+    width: 275px;
     border:none;
     border-radius: 5px;
     background-color: #017b6e;

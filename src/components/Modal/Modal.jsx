@@ -3,7 +3,7 @@ import '../../styles/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css'
 import Formulario from './Form/Formulario'
 import { Modal } from '@material-ui/core'
 
-export default function Cadastro() {
+export default function Cadastro(props) {
 
     const [open, setOpen] = React.useState(false);
   

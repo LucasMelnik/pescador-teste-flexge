@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import LogRocket from 'logrocket'
+
+LogRocket.init('rrjt9i/teste-pescador-flexge')
 
 ReactDOM.render(
   <React.StrictMode>

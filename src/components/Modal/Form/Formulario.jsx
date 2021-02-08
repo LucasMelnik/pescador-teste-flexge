@@ -8,16 +8,13 @@ import Logo from '../../../img/logo-flexge-white.png'
 function Formulario (props) {
     
     function handleSubmit(event){
-        
         event.preventDefault()
-        
         props.setInicio(new Date())
-        console.log(props.inicio)
+        props.onSubmit();
     }
 
     return(
         <div className="cadastro">
-            
             <form className="form-cadastro" onSubmit={handleSubmit}>
                 <img src={Logo} alt="logo" width="170" height="70"></img>
                 <div className="input-sec">
@@ -32,7 +29,7 @@ function Formulario (props) {
                     <label>Telefone</label>
                     <input className="form-control" onChange={props.fctPhone} type="tel"></input>
                 </div>
-                <button type="submit" onClick={props.fct}>Iniciar teste</button>
+                <button type="submit">Iniciar teste</button>
             </form>
         </div>
         

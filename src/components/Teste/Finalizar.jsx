@@ -23,16 +23,15 @@ export default function Finalizar(props) {
         setOpen(false);
     };
     
-    const handleOpen = (e) => {
-        setOpen(true)
-        e.preventDefault()
+    const handleOpen = () => {
+        setOpen(true);
+        props.fct();
     }
     
     const classes = useStyles();
     
     return (
         <div className={classes.root}>
-        
             <Button type="submit" variant="contained" id="end-test" value={new Date()} onClick={handleOpen}>
                 Finalizar Teste
             </Button>

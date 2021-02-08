@@ -24,7 +24,7 @@ export default function Cadastro(props) {
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
             >
-                <Formulario fct={handleClose} fctNome={props.fctNome} fctEmail={props.fctEmail} fctPhone={props.fctPhone}/>
+                <Formulario inicio={props.inicio} setInicio={props.setInicio} fct={handleClose} fctNome={props.fctNome} fctEmail={props.fctEmail} fctPhone={props.fctPhone}/>
             </Modal>
         </div>
     );

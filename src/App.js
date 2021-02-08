@@ -14,6 +14,8 @@ function App() {
   const [nome, setNome] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
+  const [hora1, setHora1] = useState(null)
+  const [hora2, setHora2] = useState(null)
   
   const handleChangeNome = (e) => {
     setNome(e.target.value)
@@ -29,14 +31,24 @@ function App() {
     setPhone(e.target.value)
     console.log(phone)
   }
+
+  const handleSubmit = (e) => {
+    setHora2(e.target.value)
+    console.log(hora2)
+  }
+
   return (
     
     <div>
-      <Cadastro fctNome={handleChangeNome} fctEmail={handleChangeEmail} fctPhone={handleChangePhone}/>
+      <Cadastro inicio={hora1} setInicio={setHora1} fctNome={handleChangeNome} fctEmail={handleChangeEmail} fctPhone={handleChangePhone}/>
       <Header/>
-      <div className="container head">
+      <div className="head">
+        <div className="title-sec">
           <Title/>
-          <Finalizar/>
+        </div>
+        <div className="btn-sec">
+          <Finalizar fct={handleSubmit}/>
+        </div>
       </div>
       <Teste/>
     </div>

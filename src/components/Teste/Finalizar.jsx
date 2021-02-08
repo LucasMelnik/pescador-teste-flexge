@@ -15,9 +15,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function Finalizar() {
+export default function Finalizar(props) {
 
-    const [data2, setData2] = useState('')
     const [open, setOpen] = useState(false);
     
     const handleClose = () => {
@@ -26,8 +25,6 @@ export default function Finalizar() {
     
     const handleOpen = (e) => {
         setOpen(true)
-        setData2(new Date())
-        console.log(data2)
         e.preventDefault()
     }
     
@@ -36,7 +33,7 @@ export default function Finalizar() {
     return (
         <div className={classes.root}>
         
-            <Button type="submit" variant="contained" id="end-test" onClick={handleOpen}>
+            <Button type="submit" variant="contained" id="end-test" value={new Date()} onClick={handleOpen}>
                 Finalizar Teste
             </Button>
             <Modal

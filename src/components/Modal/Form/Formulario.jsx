@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import {React} from 'react'
 import '../../../styles/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css'
 import './Formulario.css'
 import Logo from '../../../img/logo-flexge-white.png'
@@ -8,14 +8,18 @@ import Logo from '../../../img/logo-flexge-white.png'
 function Formulario (props) {
     
     function handleSubmit(event){
+        
         event.preventDefault()
+        
+        props.setInicio(new Date())
+        console.log(props.inicio)
     }
 
     return(
         <div className="cadastro">
             
             <form className="form-cadastro" onSubmit={handleSubmit}>
-                <img src={Logo} width="170" height="70"></img>
+                <img src={Logo} alt="logo" width="170" height="70"></img>
                 <div className="input-sec">
                     <label>Nome completo</label>
                     <input className="form-control" onChange={props.fctNome} type="text"></input>

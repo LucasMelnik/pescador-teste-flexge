@@ -1,7 +1,6 @@
 import {React, useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import $ from 'jquery'
 import {Modal} from '@material-ui/core'
 import Congrats from './Congrats'
 
@@ -19,20 +18,17 @@ const useStyles = makeStyles((theme) => ({
 export default function Finalizar() {
 
     const [data2, setData2] = useState('')
-    
-    $('#end-test').on('click', function(){
-        setData2(new Date())
-        console.log(data2)
-    })
-
     const [open, setOpen] = useState(false);
-  
+    
     const handleClose = () => {
         setOpen(false);
     };
-
-    const handleOpen = () => {
+    
+    const handleOpen = (e) => {
         setOpen(true)
+        setData2(new Date())
+        console.log(data2)
+        e.preventDefault()
     }
     
     const classes = useStyles();
@@ -40,7 +36,7 @@ export default function Finalizar() {
     return (
         <div className={classes.root}>
         
-            <Button variant="contained" id="end-test" onClick={handleOpen}>
+            <Button type="submit" variant="contained" id="end-test" onClick={handleOpen}>
                 Finalizar Teste
             </Button>
             <Modal

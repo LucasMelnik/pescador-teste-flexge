@@ -14,3 +14,12 @@
 .dicas-sec .sec{
     width: 49%;
 }
+
+.canvas{
+    position: absolute;
+    opacity: 0.45;
+}
+
+.richtxt{
+    margin-bottom: 50px;
+}

@@ -9,4 +9,6 @@
 
 .section p{
     margin: 0px;
+    color: black;
+    font-weight: 500;
 }

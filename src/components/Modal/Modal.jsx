@@ -14,6 +14,7 @@ export default function Cadastro(props) {
     window.onload = function(){
         setOpen(true);
     }
+
   
     return (
         <div>
@@ -23,7 +24,7 @@ export default function Cadastro(props) {
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
             >
-                <Formulario fct={handleClose}/>
+                <Formulario fct={handleClose} fctNome={props.fctNome} fctEmail={props.fctEmail} fctPhone={props.fctPhone}/>
             </Modal>
         </div>
     );

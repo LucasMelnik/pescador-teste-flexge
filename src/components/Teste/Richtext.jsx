@@ -2,9 +2,9 @@ import React, {Component, PropTypes} from 'react';
 import RichTextEditor from 'react-rte';
 
 class MyStatefulEditor extends Component {
-  static propTypes = {
+  /*static propTypes = {
     onChange: PropTypes.func
-  };
+  };*/
 
   state = {
     value: RichTextEditor.createEmptyValue()
@@ -31,3 +31,5 @@ class MyStatefulEditor extends Component {
     );
   }
 }
+
+export default MyStatefulEditor;

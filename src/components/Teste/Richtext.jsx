@@ -27,6 +27,7 @@ class MyStatefulEditor extends Component {
       <RichTextEditor
         value={this.state.value}
         onChange={this.onChange}
+        placeholder="Use este campo para anotações pessoais."
       />
     );
   }

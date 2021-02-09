@@ -19,30 +19,32 @@ function Teste () {
             <div className="container">
                 <Colunas/>
             </div>
-            <div className="dicas-sec">   
-                <div className="sec">
-                    {column1.map((e) =>
-                        <Dicas text={e}/>
-                        )}
+            <p className="canvas-ph">Você pode usar a ferramenta de caneta para riscar e organizar as dicas.</p>
+            <div className="dicas-body">
+                <div className="dicas-sec">   
+                    <div className="sec">
+                        {column1.map((e) =>
+                            <Dicas text={e}/>
+                            )}
+                    </div>
+                    <div className="sec">
+                        {column2.map((e) =>
+                            <Dicas text={e}/>
+                            )}
+                    </div> 
+                    <CanvasDraw className="canvas"
+                        gridColor="black"
+                        canvasWidth= "calc(75% - 210px)"
+                        canvasHeight="120%"
+                        brushRadius={1}
+                        hideGrid={true}
+                        brushColor="black"
+                        />
                 </div>
-                <div className="sec">
-                    {column2.map((e) =>
-                        <Dicas text={e}/>
-                        )}
-                </div> 
-                <CanvasDraw className="canvas"
-                    gridColor="black"
-                    canvasWidth= "calc(100% - 210px)"
-                    canvasHeight={570}
-                    brushRadius={1}
-                    hideGrid={true}
-                    brushColor="black"
-                    />
-            </div>
-            <div className="richtxt">
+                <div className="rich-txt">
                     <RichText/>
+                </div>
             </div>
-            
         </div>
         )
 

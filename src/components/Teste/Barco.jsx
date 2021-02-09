@@ -9,7 +9,7 @@ function Barco (props) {
             <p>{props.name}</p>
             <div className="options">
                 <select>
-                    <option selected></option>
+                    <option value={null}></option>
                     <option>Amarelo</option>
                     <option>Azul</option>
                     <option>Branco</option>
@@ -17,7 +17,7 @@ function Barco (props) {
                     <option>Vermelho</option>
                 </select>
                 <select>
-                    <option selected></option>
+                    <option value={null}></option>
                     <option>Alvorada</option>
                     <option>Pacífico</option>
                     <option>Santa Mônica</option>
@@ -25,7 +25,7 @@ function Barco (props) {
                     <option>Thor</option>
                 </select>
                 <select>
-                    <option selected></option>
+                    <option value={null}></option>
                     <option>André</option>
                     <option>Daniel</option>
                     <option>Junior</option>
@@ -33,7 +33,7 @@ function Barco (props) {
                     <option>Rodrigo</option>
                 </select>
                 <select>
-                    <option selected></option>
+                    <option value={null}></option>
                     <option>Atum</option>
                     <option>Frango</option>
                     <option>Presunto</option>
@@ -41,7 +41,7 @@ function Barco (props) {
                     <option>Salame</option>
                 </select>
                 <select>
-                    <option selected></option>
+                    <option value={null}></option>
                     <option>Dourado</option>
                     <option>Jaú</option>
                     <option>Jurupoca</option>
@@ -49,7 +49,7 @@ function Barco (props) {
                     <option>Traíra</option>
                 </select>
                 <select>
-                    <option selected></option>
+                    <option value={null}></option>
                     <option>Analista</option>
                     <option>Policial</option>
                     <option>Professor</option>

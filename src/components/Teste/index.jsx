@@ -32,14 +32,14 @@ function Teste () {
                 </div> 
                 <CanvasDraw className="canvas"
                     gridColor="black"
-                    canvasWidth={1150}
+                    canvasWidth= "calc(100% - 210px)"
                     canvasHeight={570}
                     brushRadius={1}
                     hideGrid={true}
                     brushColor="black"
                     />
             </div>
-            <div className="container richtxt">
+            <div className="richtxt">
                     <RichText/>
             </div>
             

@@ -23,11 +23,16 @@
 
 .cadastro .form-cadastro .input-sec{
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.cadastro .form-cadastro .input-sec input{
+.cadastro .form-cadastro .input-sec .form-control{
     border-color: rgb(3, 30, 60);
+    margin: 10px 0px;
+    width: 300px;
 }
 
 

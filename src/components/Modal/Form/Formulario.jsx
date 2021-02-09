@@ -2,6 +2,7 @@ import {React} from 'react'
 import '../../../styles/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css'
 import './Formulario.css'
 import Logo from '../../../img/logo-flexge-white.png'
+import {TextField, Button} from '@material-ui/core'
 
 
 
@@ -21,18 +22,11 @@ function Formulario (props) {
             <form className="form-cadastro" onSubmit={handleSubmit}>
                 <img src={Logo} alt="logo" width="170" height="70"></img>
                 <div className="input-sec">
-                    <label>Nome completo</label>
-                    <input className="form-control" onChange={props.fctNome} type="text"></input>
+                    <TextField label="Nome Completo" className="form-control" onChange={props.fctNome} type="text"/>
+                    <TextField label="E-mail" className="form-control" onChange={props.fctEmail} type="text"/>
+                    <TextField label="Telefone" className="form-control" onChange={props.fctPhone} type="text"/>
                 </div>
-                <div className="input-sec">
-                    <label>E-mail</label>
-                    <input className="form-control" onChange={props.fctEmail} type="email"></input>
-                </div>
-                <div className="input-sec">
-                    <label>Telefone</label>
-                    <input className="form-control" onChange={props.fctPhone} type="tel"></input>
-                </div>
-                <button type="submit" onClick={props.fct}>Iniciar teste</button>
+                <Button variant="contained" type="submit" onClick={props.fct}>Iniciar teste</Button>
             </form>
         </div>
         

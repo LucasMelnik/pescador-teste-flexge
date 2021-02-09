@@ -9,16 +9,13 @@ import {TextField, Button} from '@material-ui/core'
 function Formulario (props) {
     
     function handleSubmit(event){
-        
         event.preventDefault()
-        
         props.setInicio(new Date())
-        console.log(props.inicio)
+        props.onSubmit();
     }
 
     return(
         <div className="cadastro">
-            
             <form className="form-cadastro" onSubmit={handleSubmit}>
                 <img src={Logo} alt="logo" width="170" height="70"></img>
                 <div className="input-sec">

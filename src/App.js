@@ -1,53 +1,64 @@
 import './App.css';
-import {useState} from 'react'
+import { useEffect, useState } from 'react';
 import Cadastro from './components/Modal/Modal'
 import Teste from './components/Teste'
 import Finalizar from './components/Teste/Finalizar'
 import Title from './components/Teste/Title'
 import Header from './components/Header/Header'
-import {axios} from 'axios'
+import axios from 'axios'
+import LogRocket from 'logrocket';
 
+LogRocket.init('qu0hzp/flexge-website');
 
 
 function App() {
-  
+
+  useEffect(() => { LogRocket.startNewSession() } ,[])
+
   const [nome, setNome] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
-  const [hora1, setHora1] = useState(null)
-  const [hora2, setHora2] = useState(null)
-  
+  const [horaInicio, setHoraInicio] = useState()
+
   const handleChangeNome = (e) => {
     setNome(e.target.value)
-    console.log(nome)
   }
   
   const handleChangeEmail = (e) => {
     setEmail(e.target.value)
-    console.log(email)
   }
   
   const handleChangePhone = (e) => {
     setPhone(e.target.value)
-    console.log(phone)
   }
 
-  const handleSubmit = (e) => {
-    setHora2(e.target.value)
-    console.log(hora2)
+  const handleFinish = async () => {
+    LogRocket.identify({
+      name: nome,
+      email,
+      tempo: (Date.now() - horaInicio.valueOf()) / 60000,
+    });
+
+    await axios.post("https://api.flexge.com/public/teste-pescador-finalizado", {
+      nome,
+      email,
+      phone,
+      tempo: (Date.now() - horaInicio.valueOf()) / 60000,
+      logRocketUrl: LogRocket.sessionURL
+    });
   }
 
   return (
     
     <div>
-      <Cadastro inicio={hora1} setInicio={setHora1} fctNome={handleChangeNome} fctEmail={handleChangeEmail} fctPhone={handleChangePhone}/>
+      <Cadastro inicio={horaInicio} setInicio={setHoraInicio} fctNome={handleChangeNome} fctEmail={handleChangeEmail} fctPhone={handleChangePhone}/>
       <Header/>
       <div className="head">
         <div className="title-sec">
           <Title/>
         </div>
         <div className="btn-sec">
-          <Finalizar fct={handleSubmit}/>
+          <Finalizar fct={handleFinish}/>
         </div>
       </div>
       <Teste/>

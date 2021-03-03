@@ -9,6 +9,7 @@ export default function Cadastro(props) {
   
     const handleClose = () => {
         setOpen(false);
+        props.onClose();
     };
 
     return (

@@ -32,13 +32,14 @@ function App() {
     setPhone(e.target.value)
   }
 
-  const handleFinish = async () => {
-    LogRocket.identify({
+  const handleClose = () => {
+    LogRocket.identify(email, {
       name: nome,
       email,
-      tempo: (Date.now() - horaInicio.valueOf()) / 60000,
     });
+  }
 
+  const handleFinish = async () => {
     await axios.post("https://api.flexge.com/public/teste-pescador-finalizado", {
       nome,
       email,
@@ -51,7 +52,7 @@ function App() {
   return (
     
     <div>
-      <Cadastro inicio={horaInicio} setInicio={setHoraInicio} fctNome={handleChangeNome} fctEmail={handleChangeEmail} fctPhone={handleChangePhone}/>
+      <Cadastro inicio={horaInicio} setInicio={setHoraInicio} onClose={handleClose} fctNome={handleChangeNome} fctEmail={handleChangeEmail} fctPhone={handleChangePhone}/>
       <Header/>
       <div className="head">
         <div className="title-sec">

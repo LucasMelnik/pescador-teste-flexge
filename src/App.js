@@ -8,7 +8,7 @@ import Header from './components/Header/Header'
 import axios from 'axios'
 import LogRocket from 'logrocket';
 
-LogRocket.init('qu0hzp/flexge-website');
+// LogRocket.init('qu0hzp/flexge-website');
 
 
 function App() {
@@ -40,7 +40,40 @@ function App() {
     setPhone(e.target.value)
   }
 
-<<<<<<< HEAD
+  const handleClose = () => {
+    // LogRocket.identify(email, {
+    //   name: nome,
+    //   email,
+    // });
+    console.log(email, {
+      name: nome,
+      email,
+    });
+  }
+
+  const handleFinish = async () => {
+    verifyResult(barco1)
+    verifyResult(barco2)
+    verifyResult(barco3)
+    verifyResult(barco4)
+    verifyResult(barco5)
+console.log({nome,
+  email,
+  phone,
+  tempo: (Date.now() - horaInicio.valueOf()) / 60000,
+  result,
+  logRocketUrl: LogRocket.sessionURL})
+    return;
+    await axios.post("https://api.flexge.com/public/teste-pescador-finalizado", {
+      nome,
+      email,
+      phone,
+      tempo: (Date.now() - horaInicio.valueOf()) / 60000,
+      result,
+      logRocketUrl: LogRocket.sessionURL
+    });
+  }
+
   function verifyResult (state) {
     let color = state.color
     let boat = state.boat
@@ -51,6 +84,7 @@ function App() {
 
     if (color == "correct") { } else {
       setResult("wrong")
+      console.log('seto')
     }
 
     if (boat == "correct") { } else {
@@ -74,48 +108,9 @@ function App() {
     }
   }
 
-  const handleFinish = async () => {
-    LogRocket.identify({
-=======
-  const handleClose = () => {
-    LogRocket.identify(email, {
->>>>>>> 187a31ed790ff0fbfda04b3fc15ab3b1fe258941
-      name: nome,
-      email,
-    });
-  }
-
-  const handleFinish = async () => {
-    await axios.post("https://api.flexge.com/public/teste-pescador-finalizado", {
-      nome,
-      email,
-      phone,
-      tempo: (Date.now() - horaInicio.valueOf()) / 60000,
-      result,
-      logRocketUrl: LogRocket.sessionURL
-    });
-
-    verifyResult(barco1)
-    verifyResult(barco2)
-    verifyResult(barco3)
-    verifyResult(barco4)
-    verifyResult(barco5)
-
-  }
-  
   return (
-    
     <div>
-<<<<<<< HEAD
-      <Cadastro
-        inicio={horaInicio}
-        setInicio={setHoraInicio}
-        fctNome={handleChangeNome}
-        fctEmail={handleChangeEmail}
-        fctPhone={handleChangePhone}/>
-=======
       <Cadastro inicio={horaInicio} setInicio={setHoraInicio} onClose={handleClose} fctNome={handleChangeNome} fctEmail={handleChangeEmail} fctPhone={handleChangePhone}/>
->>>>>>> 187a31ed790ff0fbfda04b3fc15ab3b1fe258941
       <Header/>
       <div className="head">
         <div className="title-sec">

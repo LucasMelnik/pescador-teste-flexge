@@ -49,12 +49,12 @@ function App() {
     const barcos = [barco1, barco2, barco3, barco4, barco5]
 
     const isCorrect = !barcos.some( barco =>
-      barco.color === "wrong"
-      || barco.boat === "wrong"
-      || barco.fisherman === "wrong"
-      || barco.sanduich === "wrong"
-      || barco.fish === "wrong"
-      || barco.profession === "wrong"
+      barco.color != "wrong"
+      || barco.boat != "correct"
+      || barco.fisherman != "correct"
+      || barco.sanduich != "correct"
+      || barco.fish != "correct"
+      || barco.profession != "correct"
     ) 
 
     await axios.post("https://api.flexge.com/public/teste-pescador-finalizado", {

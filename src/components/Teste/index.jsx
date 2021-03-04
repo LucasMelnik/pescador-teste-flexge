@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import Title from './Title'
 import Colunas from './Colunas'
 import Dicas from './Dicas'
 import CanvasDraw from 'react-canvas-draw'
@@ -11,13 +10,19 @@ import './style/index.css'
 const column1 = listDicas.dica1
 const column2 = listDicas.dica2
 
-function Teste () {
+function Teste (props) {
 
 
     return(
         <div>
             <div className="container">
-                <Colunas/>
+                <Colunas 
+                    setBarco1={props.setBarco1}
+                    setBarco2={props.setBarco2}
+                    setBarco3={props.setBarco3}
+                    setBarco4={props.setBarco4}
+                    setBarco5={props.setBarco5}
+                />
             </div>
             <p className="canvas-ph">Você pode usar a ferramenta de caneta para riscar e organizar as dicas.</p>
             <div className="dicas-body">

@@ -32,7 +32,13 @@ export default function Finalizar(props) {
     
     return (
         <div className={classes.root}>
-            <Button type="submit" variant="contained" id="end-test" value={new Date()} onClick={handleOpen}>
+            <Button
+                type="submit" 
+                variant="contained" 
+                id="end-test" 
+                value={new Date()} 
+                onClick={handleOpen}
+            >
                 Finalizar Teste
             </Button>
             <Modal

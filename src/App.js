@@ -20,6 +20,16 @@ function App() {
   const [phone, setPhone] = useState("")
   const [horaInicio, setHoraInicio] = useState()
 
+  const [barcos, setBarcos] = useState([])
+
+  const [barco1, setBarco1] = useState({})
+  const [barco2, setBarco2] = useState({})
+  const [barco3, setBarco3] = useState({})
+  const [barco4, setBarco4] = useState({})
+  const [barco5, setBarco5] = useState({})
+
+  const [result, setResult] = useState("correct")
+
   const handleChangeNome = (e) => {
     setNome(e.target.value)
   }
@@ -30,6 +40,39 @@ function App() {
   
   const handleChangePhone = (e) => {
     setPhone(e.target.value)
+  }
+
+  function verifyResult (state) {
+    let color = state.color
+    let boat = state.boat
+    let fisherman = state.fisherman
+    let sanduich = state.sanduich
+    let fish = state.fish
+    let profession = state.profession
+
+    if (color == "correct") { } else {
+      setResult("wrong")
+    }
+
+    if (boat == "correct") { } else {
+      setResult("wrong")
+    }
+
+    if (fisherman == "correct") { } else {
+      setResult("wrong")
+    }
+
+    if (sanduich == "correct") { } else {
+      setResult("wrong")
+    }
+
+    if (fish == "correct") { } else {
+      setResult("wrong")
+    }
+
+    if (profession == "correct") { } else {
+      setResult("wrong")
+    }
   }
 
   const handleFinish = async () => {
@@ -44,24 +87,53 @@ function App() {
       email,
       phone,
       tempo: (Date.now() - horaInicio.valueOf()) / 60000,
+      result,
       logRocketUrl: LogRocket.sessionURL
     });
-  }
 
+    setBarcos([...barcos, {
+      barco1: barco1,
+      barco2: barco2,
+      barco3: barco3,
+      barco4: barco4,
+      barco5: barco5
+    }])
+
+    verifyResult(barco1)
+    verifyResult(barco2)
+    verifyResult(barco3)
+    verifyResult(barco4)
+    verifyResult(barco5)
+
+  }
+  
   return (
     
     <div>
-      <Cadastro inicio={horaInicio} setInicio={setHoraInicio} fctNome={handleChangeNome} fctEmail={handleChangeEmail} fctPhone={handleChangePhone}/>
+      <Cadastro
+        inicio={horaInicio}
+        setInicio={setHoraInicio}
+        fctNome={handleChangeNome}
+        fctEmail={handleChangeEmail}
+        fctPhone={handleChangePhone}/>
       <Header/>
       <div className="head">
         <div className="title-sec">
           <Title/>
         </div>
         <div className="btn-sec">
-          <Finalizar fct={handleFinish}/>
+          <Finalizar 
+            fct={handleFinish}
+          />
         </div>
       </div>
-      <Teste/>
+      <Teste
+        setBarco1={setBarco1}
+        setBarco2={setBarco2}
+        setBarco3={setBarco3}
+        setBarco4={setBarco4}
+        setBarco5={setBarco5}
+      />
     </div>
   );
 }

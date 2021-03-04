@@ -40,6 +40,7 @@ function App() {
     setPhone(e.target.value)
   }
 
+<<<<<<< HEAD
   function verifyResult (state) {
     let color = state.color
     let boat = state.boat
@@ -75,11 +76,16 @@ function App() {
 
   const handleFinish = async () => {
     LogRocket.identify({
+=======
+  const handleClose = () => {
+    LogRocket.identify(email, {
+>>>>>>> 187a31ed790ff0fbfda04b3fc15ab3b1fe258941
       name: nome,
       email,
-      tempo: (Date.now() - horaInicio.valueOf()) / 60000,
     });
+  }
 
+  const handleFinish = async () => {
     await axios.post("https://api.flexge.com/public/teste-pescador-finalizado", {
       nome,
       email,
@@ -100,12 +106,16 @@ function App() {
   return (
     
     <div>
+<<<<<<< HEAD
       <Cadastro
         inicio={horaInicio}
         setInicio={setHoraInicio}
         fctNome={handleChangeNome}
         fctEmail={handleChangeEmail}
         fctPhone={handleChangePhone}/>
+=======
+      <Cadastro inicio={horaInicio} setInicio={setHoraInicio} onClose={handleClose} fctNome={handleChangeNome} fctEmail={handleChangeEmail} fctPhone={handleChangePhone}/>
+>>>>>>> 187a31ed790ff0fbfda04b3fc15ab3b1fe258941
       <Header/>
       <div className="head">
         <div className="title-sec">

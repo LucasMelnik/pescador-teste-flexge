@@ -28,6 +28,21 @@ class MyStatefulEditor extends Component {
         value={this.state.value}
         onChange={this.onChange}
         placeholder="Use este campo para anotações pessoais."
+        rootStyle={{ height: 300}}
+        toolbarConfig={{
+          display: ['INLINE_STYLE_BUTTONS', 'BLOCK_TYPE_BUTTONS'],
+          BLOCK_TYPE_BUTTONS: [
+            {label: 'UL', style: 'unordered-list-item'},
+            {label: 'OL', style: 'ordered-list-item'}
+          ],
+          INLINE_STYLE_BUTTONS: [
+            {label: 'Bold', style: 'BOLD'},
+            {label: 'Italic', style: 'ITALIC'},
+            {label: 'Strikethrough', style: 'STRIKETHROUGH'},
+            {label: 'Monospace', style: 'CODE'},
+            {label: 'Underline', style: 'UNDERLINE'},
+          ]
+        }}
       />
     );
   }

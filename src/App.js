@@ -20,8 +20,6 @@ function App() {
   const [phone, setPhone] = useState("")
   const [horaInicio, setHoraInicio] = useState()
 
-  const [barcos, setBarcos] = useState([])
-
   const [barco1, setBarco1] = useState({})
   const [barco2, setBarco2] = useState({})
   const [barco3, setBarco3] = useState({})
@@ -90,14 +88,6 @@ function App() {
       result,
       logRocketUrl: LogRocket.sessionURL
     });
-
-    setBarcos([...barcos, {
-      barco1: barco1,
-      barco2: barco2,
-      barco3: barco3,
-      barco4: barco4,
-      barco5: barco5
-    }])
 
     verifyResult(barco1)
     verifyResult(barco2)

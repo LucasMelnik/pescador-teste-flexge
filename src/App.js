@@ -8,8 +8,7 @@ import Header from './components/Header/Header'
 import axios from 'axios'
 import LogRocket from 'logrocket';
 
-// LogRocket.init('qu0hzp/flexge-website');
-
+LogRocket.init('qu0hzp/flexge-website');
 
 function App() {
 
@@ -26,8 +25,6 @@ function App() {
   const [barco4, setBarco4] = useState({})
   const [barco5, setBarco5] = useState({})
 
-  const [result, setResult] = useState("correct")
-
   const handleChangeNome = (e) => {
     setNome(e.target.value)
   }
@@ -41,11 +38,7 @@ function App() {
   }
 
   const handleClose = () => {
-    // LogRocket.identify(email, {
-    //   name: nome,
-    //   email,
-    // });
-    console.log(email, {
+    LogRocket.identify(email, {
       name: nome,
       email,
     });
@@ -55,9 +48,7 @@ function App() {
 
     const barcos = [barco1, barco2, barco3, barco4, barco5]
 
-    console.log(barcos)
-
-    const isCorrect = !barcos.some( barco => 
+    const isCorrect = !barcos.some( barco =>
       barco.color === "wrong"
       || barco.boat === "wrong"
       || barco.fisherman === "wrong"
@@ -66,16 +57,12 @@ function App() {
       || barco.profession === "wrong"
     ) 
 
-    console.log(isCorrect)
-    
-    return;
-
     await axios.post("https://api.flexge.com/public/teste-pescador-finalizado", {
       nome,
       email,
       phone,
       tempo: (Date.now() - horaInicio.valueOf()) / 60000,
-      isCorrect,
+      resultado: isCorrect ? "Correto" : "Errado",
       logRocketUrl: LogRocket.sessionURL
     });
   }

@@ -52,62 +52,34 @@ function App() {
   }
 
   const handleFinish = async () => {
-    verifyResult(barco1)
-    verifyResult(barco2)
-    verifyResult(barco3)
-    verifyResult(barco4)
-    verifyResult(barco5)
-console.log({nome,
-  email,
-  phone,
-  tempo: (Date.now() - horaInicio.valueOf()) / 60000,
-  result,
-  logRocketUrl: LogRocket.sessionURL})
+
+    const barcos = [barco1, barco2, barco3, barco4, barco5]
+
+    console.log(barcos)
+
+    const isCorrect = !barcos.some( barco => 
+      barco.color === "wrong"
+      || barco.boat === "wrong"
+      || barco.fisherman === "wrong"
+      || barco.sanduich === "wrong"
+      || barco.fish === "wrong"
+      || barco.profession === "wrong"
+    ) 
+
+    console.log(isCorrect)
+    
     return;
+
     await axios.post("https://api.flexge.com/public/teste-pescador-finalizado", {
       nome,
       email,
       phone,
       tempo: (Date.now() - horaInicio.valueOf()) / 60000,
-      result,
+      isCorrect,
       logRocketUrl: LogRocket.sessionURL
     });
   }
-
-  function verifyResult (state) {
-    let color = state.color
-    let boat = state.boat
-    let fisherman = state.fisherman
-    let sanduich = state.sanduich
-    let fish = state.fish
-    let profession = state.profession
-
-    if (color == "correct") { } else {
-      setResult("wrong")
-      console.log('seto')
-    }
-
-    if (boat == "correct") { } else {
-      setResult("wrong")
-    }
-
-    if (fisherman == "correct") { } else {
-      setResult("wrong")
-    }
-
-    if (sanduich == "correct") { } else {
-      setResult("wrong")
-    }
-
-    if (fish == "correct") { } else {
-      setResult("wrong")
-    }
-
-    if (profession == "correct") { } else {
-      setResult("wrong")
-    }
-  }
-
+  
   return (
     <div>
       <Cadastro inicio={horaInicio} setInicio={setHoraInicio} onClose={handleClose} fctNome={handleChangeNome} fctEmail={handleChangeEmail} fctPhone={handleChangePhone}/>

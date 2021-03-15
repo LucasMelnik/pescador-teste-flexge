@@ -6,8 +6,8 @@ function Title () {
 
     return(
         <div className="title">
-            <h1>História de Pescador</h1>
-            <p>Cinco rapazes foram pescar no Pantanal, cada um com seu barco. Descubra o que cada um deles pescou.</p>
+            <h1>TESTE LÓGICO</h1>
+            <p>Cinco amigos se encontraram, cada um com seu carro. Descubra o que cada um deles vendeu.</p>
         </div>
     )
 }

@@ -11,61 +11,61 @@ function Colunas (props) {
                 <p>Categorias</p>
                 <ul className="list-sec">
                     <li>Cor</li>
-                    <li>Barco</li>
-                    <li>Pescador</li>
+                    <li>Marca do Carro</li>
+                    <li>Nomes</li>
                     <li>Sanduiche</li>
-                    <li>Peixe</li>
+                    <li>Objeto</li>
                     <li>Profissão</li>
                 </ul>
             </div>
             <Barco
-                name="Barco 1" 
-                cor="Verde" 
-                barco="Thor" 
-                pescador="Daniel" 
-                sanduiche="Frango" 
-                peixe="Pacu" 
-                profissao="Professor"
+                name= "Carro 1" 
+                cor="Branco" 
+                barco="Toyota" 
+                pescador="Rafael" 
+                sanduiche="Queijo" 
+                peixe="Tablet" 
+                profissao="Piloto"
                 setBarco={props.setBarco1}
             />
             <Barco 
-                name="Barco 2" 
-                cor="Azul" 
-                barco="Santa-Monica" 
-                pescador="André" 
-                sanduiche="Salame" 
-                peixe="Jaú" 
-                profissao="Policial"
+                name="Carro 2" 
+                cor="Vermelho" 
+                barco="Fiat" 
+                pescador="Pedro" 
+                sanduiche="Frango" 
+                peixe="Caixa de Som" 
+                profissao="Veterinário"
                 setBarco={props.setBarco2}
             />
             <Barco
-                name="Barco 3" 
-                cor="Vermelho" 
-                barco="Pacífico" 
-                pescador="Rodrigo" 
-                sanduiche="Atum" 
-                peixe="Dourado" 
-                profissao="Veterinário"
+                name="Carro 3" 
+                cor="Verde" 
+                barco="Peugeot" 
+                pescador="João" 
+                sanduiche="Presunto" 
+                peixe="Televisão" 
+                profissao="Analista"
                 setBarco={props.setBarco3}
             />
             <Barco 
-                name="Barco 4" 
-                cor="Amarelo" 
-                barco="Alvorada" 
-                pescador="Junior" 
-                sanduiche="Queijo" 
-                peixe="Jurupoca" 
-                profissao="Analista"
+                name="Carro 4" 
+                cor="Azul" 
+                barco="Renault" 
+                pescador="Felipe" 
+                sanduiche="Carne" 
+                peixe="Computador" 
+                profissao="Médico"
                 setBarco={props.setBarco4}
             />
             <Barco 
-                name="Barco 5" 
-                cor="Branco" 
-                barco="Saturno" 
+                name="Carro 5" 
+                cor="Preto" 
+                barco="Ford" 
                 pescador="Leandro" 
-                sanduiche="Presunto" 
-                peixe="Traíra" 
-                profissao="Vendedor"
+                sanduiche="Tomate" 
+                peixe="Celular" 
+                profissao="Professor"
                 setBarco={props.setBarco5}
             />
         </div>

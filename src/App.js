@@ -49,7 +49,7 @@ function App() {
     const barcos = [barco1, barco2, barco3, barco4, barco5]
 
     const isCorrect = !barcos.some( barco =>
-      barco.color != "wrong"
+      barco.color != "correct"
       || barco.boat != "correct"
       || barco.fisherman != "correct"
       || barco.sanduich != "correct"

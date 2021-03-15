@@ -1,30 +1,29 @@
 {
     "dica1":[
-        "O barco Amarelo está em algum lugar à esquerda do barco do Vendedor.",
-        "O barco do pescador que levou um sanduíche de Salame está ao lado do barco do Veterinário.",
-        "O barco do Policial está em algum lugar entre o do que levou um sanduíche de Frango e o do que é Analista, nessa ordem.",
-        "O barco Verde está ao lado do barco do Policial.",
-        "O barco do Analista está exatamente à direita do barco do Veterinário.",
-        "O barco do Analista está exatamente à direita do barco do Veterinário.",
-        "O pescador que pescou um Traíra está na quinta posição.",
-        "O pescador que pescou um Dourado está em algum lugar à direita do barco Azul.",
-        "O sanduíche de Salame é do pescador que está com o barco na segunda posição.",
-        "O barco do Rodrigo está ao lado do barco do Junior.",
-        "O barco do Rodrigo está na terceira posição.",
-        "O barco Azul está em algum lugar à esquerda do barco do Junior."
+        "O carro Azul está em algum lugar à esquerda do carro do professor.",
+        "O carro do homem que levou um sanduíche de frango está ao lado do carro do analista.",
+        "O carro do veterinario está em algum lugar entre o do que levou um sanduíche de Frango e o do que é medico, nessa ordem.",
+        "O carro Branco está ao lado do carro do veterinario.",
+        "O carro do medico está exatamente à direita do carro do analista.",
+        "O homem que vendeu um celular está na quinta posição.",
+        "O homem que vendeu uma televisão está em algum lugar à direita do carro vermelho.",
+        "O sanduíche de frango é do homem que está com o carro na segunda posição.",
+        "O carro do João está ao lado do carro do Felipe.",
+        "O carro do João está na terceira posição.",
+        "O carro vermelho está em algum lugar à esquerda do carro do Felipe.",
+        "O carro Renault está ao lado do carro do Leandro.",
+        "O carro Fiat está exatamente à esquerda do carro do homem que vendeu uma televisão."
     ],
 
     "dica2":[
-        "O barco Alvorada está ao lado do barco do Leandro.",
-        "O barco Santa Mônica está exatamente à esquerda do barco do pescador que pescou um Dourado.",
-        "Leandro está em algum lugar à direita do barco de cor Azul.",
-        "O barco Pacífico está exatamente à esquerda do barco do pescador que pescou o peixe Jurupoca.",
-        "Na terceira posição está o pescador que conseguiu um Dourado.",
-        "O barco Thor está na primeira posição.",
-        "O barco Amarelo está exatamente à esquerda do barco do pescador que trouxe um sanduíche de Presunto.",
-        "O barco verde está em algum lugar à esquerda do barco Azul.",
-        "Quem pescou um Jaú está em algum lugar entre o pescador Daniel e quem pescou um Jurupoca, nessa ordem.",
-        "O peixe Dourado foi pescado por alguém que está ao lado do pescador que trouxe o sanduíche de Queijo.",
-        "O barco Vermelho está em algum lugar à esquerda do barco do pescador que trouxe um sanduíche de Presunto."
+        "Leandro está em algum lugar à direita do carro de cor vermelho.",
+        "O carro Peugeot está exatamente à esquerda do carro do homem que vendeu um computador.",
+        "Na terceira posição está o homem que vendeu uma televisão.",
+        "O carro Toyota está na primeira posição.",
+        "O carro azul está exatamente à esquerda do carro do homem que trouxe um sanduíche de tomate.",
+        "O carro amarelo está em algum lugar à esquerda do carro vermelho.",
+        "Quem vendeu uma caixa de som está em algum lugar entre o Rafael e quem vendeu um computador, nessa ordem.",
+        "A televisão foi vendida por alguém que está ao lado do homem que trouxe o sanduíche de carne.",
+        "O carro verde está em algum lugar à esquerda do carro do homem que trouxe um sanduíche de tomate."
     ]
 }
